@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #e0f7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background: #ffffffcc;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff8cbf;
+  margin-bottom: 1rem;
+}
+
+.ball {
+  background: radial-gradient(circle at center, #ffd1dc 0%, #ffccf9 100%);
+  padding: 2rem;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.ball:hover {
+  transform: scale(1.05);
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.answer label {
+  display: none;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#a1:checked ~ .answer label[for="a2"],
+#a2:checked ~ .answer label[for="a3"],
+#a3:checked ~ .answer label[for="a4"],
+#a4:checked ~ .answer label[for="a5"],
+#a5:checked ~ .answer label[for="a6"],
+#a6:checked ~ .answer label[for="a7"],
+#a7:checked ~ .answer label[for="a8"],
+#a8:checked ~ .answer label[for="a9"],
+#a9:checked ~ .answer label[for="a10"],
+#a10:checked ~ .answer label[for="a11"],
+#a11:checked ~ .answer label[for="a12"],
+#a12:checked ~ .answer label[for="a13"],
+#a13:checked ~ .answer label[for="a14"],
+#a14:checked ~ .answer label[for="a15"],
+#a15:checked ~ .answer label[for="a1"] {
+  display: block;  /* Exibe a frase quando o radio button estiver selecionado */
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
